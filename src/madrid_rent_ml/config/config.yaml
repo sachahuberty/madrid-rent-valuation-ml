@@ -1,0 +1,14 @@
+project: "Madrid Rent Valuation"
+random_seed: 42
+paths:
+  raw_data: "data/raw/Houses for rent in Madrid.xlsx"
+  cleaned_data: "artifacts/cleaned_data.csv"
+  model: "artifacts/model.pkl"
+  metrics: "artifacts/metrics.json"
+pipeline:
+  target_column: "log_rent"
+  vif_threshold: 30.0
+  p_value_threshold: 0.05
+  test_size: 0.1
+features:
+  clustering_k: 4
